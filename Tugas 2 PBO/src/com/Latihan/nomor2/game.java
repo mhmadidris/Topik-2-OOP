@@ -33,16 +33,16 @@ class GameCharacter{
     }
 
     void display(){
-        System.out.println("Player : " + getName());
-        System.out.println("Health : " + getLifePoint());
+        System.out.println("Nama Pemain : " + getName());
+        System.out.println("Nyawa : " + getLifePoint());
     }
 
     void compare (GameCharacter player){
         int compare = Integer.compare(this.lifePoint, player.getLifePoint());
 
-        if(compare > 0) System.out.println(this.name + " CHAMPIONSSS!!");
-        else if(compare < 0) System.out.println(player.getName() + " CHAMPIONSSS!!");
-        else System.out.println("DRAW");
+        if(compare > 0) System.out.println(this.name + " PEMENANG!!!");
+        else if(compare < 0) System.out.println(player.getName() + " PEMENANG!!!");
+        else System.out.println("SERI");
 
     }
 }
@@ -52,19 +52,19 @@ class GameMain {
         GameCharacter player2 = new GameCharacter("Sub Zero", 5, 25);
         player1.setLifePoint(100);
         player2.setLifePoint(100);
-        System.out.println("Status Player");
+        System.out.println("Status Pemain");
         player1.display();
         player2.display();
         System.out.println();
 
         System.out.println("Chapter 1");
-        System.out.println(player1.getName() + " Kick " + player2.getName());
+        System.out.println(player1.getName() + " Tendangan " + player2.getName());
         player1.kick(player2);
         player2.display();
         System.out.println();
 
         System.out.println("Chapter 2");
-        System.out.println(player2.getName() + " Kick " + player1.getName());
+        System.out.println(player2.getName() + " Tendangan " + player1.getName());
         player2.kick(player1);
         player1.display();
         System.out.println();
@@ -73,7 +73,7 @@ class GameMain {
         for(int i = 0; i < 3; i++){
             player2.hit(player1);
         }
-        System.out.println(player2.getName() + " Hit 3x " + player1.getName());
+        System.out.println(player2.getName() + " Tendangan 3x " + player1.getName());
         player1.display();
         System.out.println();
 
@@ -81,7 +81,7 @@ class GameMain {
         for(int i = 0; i < 4; i++){
             player1.kick(player2);
         }
-        System.out.println(player1.getName() + " Kick 4x " + player2.getName());
+        System.out.println(player1.getName() + " Tendangan 4x " + player2.getName());
         player2.display();
         System.out.println();
 
